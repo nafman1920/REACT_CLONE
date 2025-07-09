@@ -1,0 +1,128 @@
+/* SECTION STYLES */
+.services-section {
+  background-color: #f9fafc;
+  padding: 60px 20px;
+  color: #1d1a39;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER LAYOUT */
+.services-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+/* LOGO STYLE */
+.services-logo {
+  width: 200px;
+  height: 200px;
+  background-color: #bfe9ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-middle {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inner {
+  width: 80px;
+  height: 80px;
+  background-color: #25214d;
+  border-radius: 50%;
+}
+
+/* TEXT HEADINGS */
+.services-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.services-label {
+  background-color: #25214d;
+  color: white;
+  padding: 5px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.services-title {
+  font-size: clamp(28px, 6vw, 48px);
+  margin: 0 0 20px 0;
+}
+
+.services-subtitle {
+  font-size: clamp(18px, 4vw, 24px);
+  margin: 0;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* INDIVIDUAL CARD */
+.service-card {
+  text-align: left;
+}
+
+.service-title {
+  color: #1db4ff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .services-logo {
+    margin: 0 auto;
+  }
+
+  .services-text {
+    text-align: left;
+  }
+
+  .services-title {
+    font-size: 32px;
+  }
+
+  .services-subtitle {
+    font-size: 18px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

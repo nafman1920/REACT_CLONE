@@ -1,0 +1,126 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.hero-heading-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-heading {
+  font-size: 64px;
+  font-weight: bold;
+  color: #1c1c3f;
+  margin: 0;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 50%;
+}
+
+/* Optional for spacing */
+.hero-tagline {
+  font-size: 20px;
+  margin: 20px 0 40px;
+  color: #1c1c3f;
+}
+
+.hero-section {
+  background-color: #FFD940;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.hero-buttons div {
+  max-width: 280px;
+  text-align: left;
+}
+
+.hero-buttons h3 {
+  color: #00aeef;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 12px 0 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-buttons p {
+  font-size: 18px;
+  color: #1c1c3f;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.hero-button {
+  background-color: #00aeef;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: #008fc3;
+}

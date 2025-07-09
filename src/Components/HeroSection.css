@@ -1,0 +1,28 @@
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFD940;
+  padding: 60px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  color: #1c1c3f;
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero-content h2 {
+  font-size: 14px;
+  background: #1c1c3f;
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 50%;
+}
