@@ -1,6 +1,6 @@
 // Components/SectionFive.jsx
 import React from 'react';
-import './SectionFive.css';
+import "../Styles/SectionFive.css"; // Adjust the path as necessary
 
 const SectionFive = () => {
   return (

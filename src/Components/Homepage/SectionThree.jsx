@@ -1,5 +1,5 @@
 import React from 'react';
-import './SectionThree.css'; // import external CSS
+import "../Styles/SectionThree.css"; // Adjust the path as necessary
 
 const SectionThree = () => (
   <section className="services-section">

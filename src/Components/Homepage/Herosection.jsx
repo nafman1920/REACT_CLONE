@@ -1,7 +1,7 @@
 import React from "react";
-import manImage from "../assets/bril-man.png";
+import manImage from "../../assets/bril-man.png";
 import { FaHeart, FaEye, FaComments } from "react-icons/fa";
-import "../App.css"; // make sure your styles are imported
+import "../Styles/Herosection.css";
 
 const Herosection = () => {
   return (

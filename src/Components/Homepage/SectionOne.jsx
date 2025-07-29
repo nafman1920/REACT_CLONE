@@ -1,5 +1,5 @@
 import React from 'react';
-import './SectionOne.css';
+import '../Styles/SectionOne.css'; // Adjust the path as necessary
 
 const SectionOne = () => (
   <section id="the-way" className="section-one">

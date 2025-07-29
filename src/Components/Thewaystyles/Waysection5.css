@@ -1,0 +1,71 @@
+/* Base Styles */
+.waysection5 {
+  background-color: #c7eafc; /* Light blue background from the image */
+  padding: 60px 20px;
+  color: #1d1b40;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.waysection5-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.waysection5-icon {
+  font-size: 100px;
+  color: #1d1b40;
+  flex-shrink: 0;
+}
+
+.waysection5-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.waysection5-text p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+  .waysection5-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .waysection5-icon {
+    font-size: 80px;
+  }
+
+  .waysection5-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .waysection5-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+  .waysection5-icon {
+    font-size: 60px;
+  }
+
+  .waysection5-text h1 {
+    font-size: 2rem;
+  }
+
+  .waysection5-text p {
+    font-size: 0.95rem;
+  }
+}

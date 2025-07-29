@@ -1,5 +1,5 @@
 import React from "react";
-import './SectionFour.css';
+import "../Styles/SectionFour.css"; // Adjust the path as necessary
 
 const SectionFour = () => (
   <section className="about-section">

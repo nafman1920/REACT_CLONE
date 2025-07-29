@@ -1,26 +1,27 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import Herosection from './Components/Herosection';
-import SectionOne from './Components/SectionOne';
-import SectionTwo from './Components/Section2';
-import SectionThree from './Components/SectionThree';
-import SectionFour from './Components/SectionFour';
-import SectionFive from './Components/SectionFive';
-import Footer from './Components/Footer'; // ✅ NEW
+import Footer from './Components/Footer';
+import Home from './Pages/Home';
+import TheWay from './Pages/Theway';
+import TheWhy from './Pages/Thewhy';
+//import TheUs from './Pages/Theus';
+//import TheHow from './Pages/Thehow';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Herosection />
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <Footer /> {/* ✅ Add footer at the end */}
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/theway" element={<TheWay />} />
+        <Route path="/theWhy" element={<TheWhy />} />
+        {/*<Route path="the-us" element={<div>TheUs</div>} />
+        <Route path="the-how" element={<div>TheHow</div>} /> */}
+
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

@@ -1,54 +1,74 @@
 import React from 'react';
-import logo from '../assets/bril-logo.svg'; // ✅ Make sure the path and name are correct
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/bril-logo.svg';
+import { useState } from 'react';
+import './Styles/Nav.css'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen)
+  }
+
+
   return (
-    <nav style={navStyle}>
-      <div style={leftStyle}>
-        <img src={logo} alt="Bril Logo" style={logoStyle} />
+    <nav className='navbar'>
+      <div className='navbar-left'>
+        <NavLink to="/" className='navbar-logo' ><img src={logo} alt="Bril Logo" /></NavLink>
       </div>
-      <div style={rightStyle}>
-        <a href="#the-way" style={linkStyle}>The Way</a>
-        <a href="#the-why" style={linkStyle}>The Why</a>
-        <a href="#the-us" style={linkStyle}>The Us</a>
-        <a href="#the-how" style={linkStyle}>The How</a>
+      <div className='navbar-right' >
+        <NavLink className='navbar-link' to="/theway" >The Way</NavLink>
+        <NavLink className='navbar-link' to="/thewhy" >The Why</NavLink>
+        <NavLink className='navbar-link' to="/theus" >The Us</NavLink>
+        <NavLink className='navbar-link' to="/thehow" >The How</NavLink>
       </div>
+
+      <div style={{display: isOpen? "block": "none"}} className='navbar-hidden' >
+        <NavLink className='navbar-link' to="/theway" >The Way</NavLink>
+        <NavLink className='navbar-link' to="/thewhy" >The Why</NavLink>
+        <NavLink className='navbar-link' to="/theus" >The Us</NavLink>
+        <NavLink className='navbar-link' to="/thehow" >The How</NavLink>
+      </div>
+
+      <div onClick={toggleNav} className='hamburger'>{isOpen?"X": "="}</div>
     </nav>
   );
 };
 
-const navStyle = {
-  position: 'sticky',
-  top: 0,
-  zIndex: 1000,
-  backgroundColor: '#FFD940',
-  padding: '12px 32px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-};
+// const navStyle = {
+//   position: 'sticky',
+//   top: 0,
+//   zIndex: 1000,
+//   backgroundColor: '#FFD940',
+//   padding: '12px 32px',
+//   display: 'flex',
+//   alignItems: 'center',
+//   justifyContent: 'space-between',
+//   boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+// };
 
-const leftStyle = {
-  display: 'flex',
-  alignItems: 'center',
-};
+// const leftStyle = {
+//   display: 'flex',
+//   alignItems: 'center',
+// };
 
-const rightStyle = {
-  display: 'flex',
-  gap: '32px',
-  alignItems: 'center',
-};
+// const rightStyle = {
+//   display: 'flex',
+//   gap: '32px',
+//   alignItems: 'center',
+// };
 
-const logoStyle = {
-  height: '40px', // adjust as needed
-};
+// const logoStyle = {
+//   height: '40px',
+// };
 
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#1c1c3f',
-  fontWeight: 'bold',
-  fontSize: '16px',
-};
+// const linkStyle = ({ isActive }) => ({
+//   textDecoration: 'none',
+//   color: isActive ? '#1c1c3f' : '#666', // active style
+//   fontWeight: 'bold',
+//   fontSize: '16px',
+// });
 
 export default Navbar;

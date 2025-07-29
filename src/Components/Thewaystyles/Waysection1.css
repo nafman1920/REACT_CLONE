@@ -1,0 +1,79 @@
+/* Base styles */
+.way-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 8rem;
+  background-color: #f9d547; /* close to the yellow in the image */
+  color: #2f2f4a; /* dark navy text */
+  font-family: 'Poppins', sans-serif; /* modern clean font, adjust as needed */
+}
+
+/* Left side */
+.way-section1__left {
+  max-width: 50%;
+}
+
+.way-section1__label {
+  background-color: #2f2f4a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.way-section1__title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Right side */
+.way-section1__right {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.way-section1__item-title {
+  color: #1fb7d4; /* light blue */
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.way-section1__item-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3d3d3d; /* slightly lighter dark text */
+  margin: 0;
+}
+
+/* Responsive for mobile */
+
+@media (max-width: 768px) {
+  .way-section1 {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .way-section1__left,
+  .way-section1__right {
+    max-width: 100%;
+  }
+
+  .way-section1__title {
+    font-size: 2.5rem;
+  }
+
+  .way-section1__right {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+}

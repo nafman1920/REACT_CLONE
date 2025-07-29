@@ -1,5 +1,5 @@
 import React from 'react';
-import './SectionTwo.css';
+import "../Styles/SectionTwo.css";
 
 const SectionTwo = () => (
   <section id="features" className="section-two">
