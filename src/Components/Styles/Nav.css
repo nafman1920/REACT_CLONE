@@ -1,4 +1,4 @@
-/* Global Reset (recommended in index.css or top of component CSS) */
+/* Global Reset */
 * {
   box-sizing: border-box;
 }
@@ -9,10 +9,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ================================
-   📌 Navbar (All Viewports)
-================================ */
-
+/* Navbar base */
 .navbar {
   position: sticky;
   top: 0;
@@ -22,17 +19,19 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 32px; /* Default desktop spacing */
+  padding: 12px 32px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Left section (logo) */
 .navbar-left {
   display: flex;
   align-items: center;
 }
 
-/* Right section (nav links) */
+.navbar-logo img {
+  height: 50px;
+}
+
 .navbar-right {
   display: flex;
   gap: 32px;
@@ -40,12 +39,6 @@ html, body {
   justify-content: center;
 }
 
-/* Logo image */
-.navbar-logo {
-  height: 50px;
-}
-
-/* Navigation links */
 .navbar-link {
   text-decoration: none;
   color: #666;
@@ -54,55 +47,68 @@ html, body {
   transition: color 0.2s ease;
 }
 
-.navbar-link:hover {
-  color: #1c1c3f;
-}
-
+.navbar-link:hover,
 .navbar-link-active {
   color: #1c1c3f;
 }
 
-/* Hideable nav section (for mobile toggle use) */
-.navbar-hidden {
-  display: none;
-}
-
-/* Hamburger Menu Icon (hidden by default) */
+/* Hamburger (initially hidden) */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   color: #1c1c3f;
   background: none;
   border: none;
 }
 
-/* ================================
-   📱 Tablet View (≤ 992px)
-================================ */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 12px 24px;
-  }
+/* Hideable nav for mobile */
+.navbar-hidden {
+  display: none;
+}
 
+/* Toggle states */
+.navbar-hidden.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  background-color: #FFD940;
+  padding: 1rem;
+  gap: 1rem;
+  z-index: 999;
+}
+
+.navbar-hidden .navbar-link {
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
   .navbar-right {
-    display: none; /* Hidden by default — shown with JS toggle */
+    display: none;
   }
 
   .hamburger {
     display: block;
   }
+
+  .navbar {
+    padding: 12px 24px;
+  }
 }
 
-/* ================================
-   📱 Mobile View (≤ 600px)
-================================ */
+/* Mobile (≤ 600px) */
 @media (max-width: 600px) {
   .navbar {
     padding: 12px 16px;
   }
 
-  .navbar-logo {
+  .navbar-logo img {
     height: 40px;
   }
 
